@@ -1,0 +1,40 @@
+
+.table{
+    width: 100%;
+    border: 1px solid black;
+}
+.firsttable{
+    width: 100%;
+    border: 1px solid black;
+}
+.card{
+    position: fixed; top:25%; left:25%;
+    width: 100%;
+    height: auto;
+    background-color: rgb(3, 18, 61);
+    color: white;
+
+}
+.submit{
+    cursor: pointer;
+    color: gold;
+    background-color: rgb(3, 18, 63);
+    padding: 4px 4px 4px 4px;
+}
+.update{
+    font-family: sans-serif;
+    color: rgb(8, 83, 5);
+    margin: 3px 15px 3px 15px;
+    font-size: 15px;
+    padding: 12px;
+    background-color: rgb(225, 252, 252);
+    border-radius: 25px;
+    border: 2px solid rgb(8, 83, 5);
+    transition: 0.4s; 
+    cursor: pointer;
+  }
+  .update:hover{
+    background-color: rgb(8, 83, 5);
+    color:rgb(255, 255, 255);
+    border: 2px solid rgb(225, 252, 252)
+  }
