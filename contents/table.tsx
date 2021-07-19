@@ -24,7 +24,7 @@ interface IContrato{
     numerocontrato: number;
   }
 
-const Table = () =>{
+const Table:React.FC = () =>{
     const [contratosLista,setContratosLista] = useState<IContrato[]>([{
         id: 1,
         nomedevedor: 'Jeferson Silva',

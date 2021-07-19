@@ -5,24 +5,30 @@ import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
 import { InputText } from 'primereact/inputtext';
 import { Password } from 'primereact/password';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import {api} from './api/api';
 import Link from 'next/link';
+import Router from 'next/router';
 
 type datalogin = {
   email: string;
   password: string;
 }
 export default function Home() {
-
+  const [ token, setToken] = useState<any>(null)
   const { register, handleSubmit } = useForm();
   function handleSignIn(data:datalogin){
    try {
     api.post('/login',data)
     .then((response)=>{
-       console.log(response) ;        
-      })
+      setToken(response.data[1]);
+      console.log(token) ;
+      if(token!){
+       Router.push('/dashboard');          
+    } else{
+      Router.push('/'); 
+    }})
    } catch (err) {
      console.log(err)
    }

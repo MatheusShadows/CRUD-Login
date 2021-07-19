@@ -24,7 +24,7 @@ export default function Home() {
       api.post('/register',data)
      .then((response)=>{
         console.log(response) ;
-        Router.push('/dashboard');        
+        Router.push('/login');        
        })
    } catch (err) {
      console.log(err)

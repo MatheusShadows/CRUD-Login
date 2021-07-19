@@ -3,7 +3,7 @@ import 'primereact/resources/themes/bootstrap4-dark-purple/theme.css';
 import 'primereact/resources/primereact.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { api } from './api/api';
 import Router  from 'next/router';
 import Head from 'next/head';
@@ -17,7 +17,7 @@ export default function Dashboard(){
         {label: 'Home', icon: 'pi pi-fw pi-home', command:()=>{setSApp(false),setHome(true)}},
         {label: 'Tabelas', icon: 'pi pi-fw pi-table', command:()=>{setSApp(true),setHome(false)}},
         {label: 'Perfil', icon: 'pi pi-fw pi-user'},
-        {label: 'Sair', icon: 'pi pi-fw pi-sign-out', command:()=>{ api.post('/logout');Router.push('/');}}
+        {label: 'Sair', icon: 'pi pi-fw pi-sign-out', command:()=>{ api.get('/logout');Router.push('/');}}
     ];
     const AppBoard=()=>{
      if(sApp == true)
@@ -29,6 +29,9 @@ export default function Dashboard(){
         return (<h1>Bem Vindo</h1>)}
         else return(<div></div>)
       }
+    useEffect(()=>{
+     
+    })
     
 
     return(
