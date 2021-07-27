@@ -16,3 +16,30 @@ a {
 * {
   box-sizing: border-box;
 }
+@media screen and (max-width: 720px) {    
+  .p-datatable.p-datatable-customers .p-datatable-thead > tr > th,
+  .p-datatable.p-datatable-customers .p-datatable-tfoot > tr > td {
+      display: none !important;
+  }
+
+  .p-datatable.p-datatable-customers .p-datatable-tbody > tr {
+      border-bottom: 1px solid var(--layer-2);
+  }
+  .p-datatable.p-datatable-customers .p-datatable-tbody > tr > td {
+  text-align: left;
+  display: block;
+  border: 0 none !important;
+  width: 100% !important;
+  float: left;
+  clear: left;
+  border: 0 none;
+}
+.p-datatable.p-datatable-customers .p-datatable-tbody > tr > td .p-column-title {
+  padding: .4rem;
+  min-width: 30%;
+  display: inline-block;
+  margin: -.4rem 1rem -.4rem -.4rem;
+  font-weight: bold;
+}
+
+}

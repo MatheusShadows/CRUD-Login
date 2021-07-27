@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import 'primeflex/primeflex.css';
-import 'primereact/resources/themes/bootstrap4-dark-blue/theme.css';
+import 'primereact/resources/themes/vela-blue/theme.css';
 import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
 import { InputText } from 'primereact/inputtext';
